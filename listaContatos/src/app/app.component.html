@@ -12,14 +12,15 @@
 
 <div class="container-result">
   <h1>Lista de contatos</h1>
+  <button type="submit" (click)="list()" >Buscar</button>
   <table>
-  <tr>
-      <th>Nome</th>
-      <th>Telefone</th>
-    </tr>
-    <tr>
-      <td> <li *ngFor="let cadastro of ">{{nome}} </li></td>
-      <td> <li *ngFor="let of ">{{contato}} </li></td>
-    </tr>
+      <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+      </tr>
+      <tr *ngFor="let pessoa of pessoas">
+        <td>{{pessoa.nome}}</td>
+        <td>{{pessoa.telefone}}</td>
+      </tr>
   </table>
 </div>
